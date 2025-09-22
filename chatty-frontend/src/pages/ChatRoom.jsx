@@ -42,7 +42,12 @@ export default function ChatRoom() {
     client.activate()
 
     return () => {
-      try { clientRef.current?.deactivate() } catch {}
+      try { 
+        clientRef.current?.deactivate() 
+      } 
+      catch(error) {
+        console.error('Error deactivating client', error)
+      }
       clientRef.current = null
     }
   }, [username, wsUrl])
