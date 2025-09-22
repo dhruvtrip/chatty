@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import useAuthStore from './store/useAuthStore.js'
 import './App.css'
+import { SignIn, ChatRoom } from './pages'
 
 export default function App() {
 
